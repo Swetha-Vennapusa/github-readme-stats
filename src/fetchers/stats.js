@@ -243,7 +243,7 @@ const fetchStats = async (
     totalPRsMerged: 0,
     mergedPRsPercentage: 0,
     totalReviews: 0,
-    totalCommits: 0,
+    totalCommits: 14,
     totalIssues: 0,
     totalStars: 0,
     totalDiscussionsStarted: 0,
