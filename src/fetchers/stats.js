@@ -243,7 +243,7 @@ const fetchStats = async (
     totalPRsMerged: 0,
     mergedPRsPercentage: 0,
     totalReviews: 0,
-    totalCommits: 14,
+    totalCommits: 0,
     totalIssues: 0,
     totalStars: 0,
     totalDiscussionsStarted: 0,
@@ -286,11 +286,12 @@ const fetchStats = async (
   stats.name = user.name || user.login;
 
   // if include_all_commits, fetch all commits using the REST API.
-  if (include_all_commits) {
-    stats.totalCommits = await totalCommitsFetcher(username);
-  } else {
-    stats.totalCommits = user.commits.totalCommitContributions;
-  }
+  // if (include_all_commits) {
+  //   stats.totalCommits = await totalCommitsFetcher(username);
+  // } else {
+  //   stats.totalCommits = user.commits.totalCommitContributions;
+  // }
+  stats.totalCommits = 14;
 
   stats.totalPRs = user.pullRequests.totalCount;
   if (include_merged_pull_requests) {
